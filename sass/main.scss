@@ -150,8 +150,9 @@ i {
 
 .column .trees p {
 	display:inline-block;
-	margin-top: 30px;
+	margin-top: 2px;
 	font-family: $font-type;
+	margin-bottom:12px;
 }
 
 .price {
@@ -160,15 +161,22 @@ i {
 
 .column .nature p {
 	display:inline-block;
-	margin-top: 30px;
+	margin-top: 2px;
 	font-family: $font-type;
 
 }
 
 .column .forrest p {
 	display:inline-block;
-	margin-top: 30px;
+	margin-top: 2px;
 	font-family: $font-type;
+}
+
+.active{
+	background-color:$static-color;
+	.fa{
+		color:white;
+	}
 }
 
 .icon:hover {
@@ -375,20 +383,37 @@ span {
 }
 
 .totalBox {
-	height:300px;
-	width:100%;
+	height:250px;
+	width:300px;
 	border:2px solid #5BA3D6; 
+	padding-top:20px;
+
 }
 
-.totalBox label {
+.totalBox label, input{
 	color:#5BA3D6;
-	font-size:40px;
+	font-size:20px;
+	font-family:$font-type;
+	display:block;
 
 }
 
+input[type="text"] {
+	width:80px;
+	margin-left:190px;
+	text-align:right;
+	
+}
 
+label {
+	margin-top:10px;
+	margin-left:190px;
 
+}
 
+.totalColumn {
+	margin-top:30px;
+}
 
 
 

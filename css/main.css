@@ -131,21 +131,27 @@ i {
 
 .column .trees p {
   display: inline-block;
-  margin-top: 30px;
-  font-family: "Ubuntu", sans-serif; }
+  margin-top: 2px;
+  font-family: "Ubuntu", sans-serif;
+  margin-bottom: 12px; }
 
 .price {
   font-weight: bold; }
 
 .column .nature p {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 2px;
   font-family: "Ubuntu", sans-serif; }
 
 .column .forrest p {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 2px;
   font-family: "Ubuntu", sans-serif; }
+
+.active {
+  background-color: #5BA3D6; }
+  .active .fa {
+    color: white; }
 
 .icon:hover {
   background-color: #5BA3D6;
@@ -353,10 +359,25 @@ span {
   position: relative; }
 
 .totalBox {
-  height: 300px;
-  width: 100%;
-  border: 2px solid #5BA3D6; }
+  height: 250px;
+  width: 300px;
+  border: 2px solid #5BA3D6;
+  padding-top: 20px; }
 
-.totalBox label {
+.totalBox label, input {
   color: #5BA3D6;
-  font-size: 40px; }
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  display: block; }
+
+input[type="text"] {
+  width: 80px;
+  margin-left: 190px;
+  text-align: right; }
+
+label {
+  margin-top: 10px;
+  margin-left: 190px; }
+
+.totalColumn {
+  margin-top: 30px; }
