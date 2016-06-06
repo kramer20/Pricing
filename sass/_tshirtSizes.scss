@@ -1,0 +1,62 @@
+.tshirt ul {
+	display: none;
+    position: absolute;
+    top: -176px;
+    margin-left:-12px;
+    margin-top:26px;
+    padding:0;
+
+}
+.dropdown:hover .tshirt ul {
+	display: block;
+	border:solid 2px #5BA3D6;
+	background-color:white;
+	height:150px;
+	width:70px;
+}
+
+.dropdown:hover ul {
+	animation: moveUp .2s, fade .2s;
+    animation-iteration-count: once;
+    animation-timing-function: linear;
+    animation-delay:.35s;
+}
+
+.dropdown {
+	.small {
+		 img {
+		height:29px;
+		width:20px;	
+		margin-left:22px;
+		margin-top: -8px;
+
+		}
+	}
+	.medium img {
+		height:34px;
+		width:25px;
+		margin-left:20px;
+		margin-top:-8px;
+
+	}
+	.large img {
+		height:39px;
+		margin-left:18px;
+		width:30px;
+		margin-top: -8px;
+		
+	}
+	.extraLarge img {
+		height:44px;
+		width:35px;
+		margin-top:15px;
+		margin-left:16px;
+	
+	}
+
+	img{
+	padding-bottom:12px;
+	}
+}	
+
+
