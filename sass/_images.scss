@@ -1,9 +1,17 @@
-img {
+.front img {
   height: 238px;
   max-width: 100%;
-  margin-left: 21px;
-  margin-top: -15px;
+  margin-left:21px;
+  margin-bottom: 8px;
+  margin-top:3px;
   padding-bottom: 20px;
    }
 
-   
+.back img {
+	 height: 238px;
+  max-width: 100%;
+  margin-right:14px;
+  margin-bottom: 8px;
+  margin-top:3px;
+  padding-bottom: 20px;
+   }

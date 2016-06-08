@@ -1,7 +1,12 @@
+.container {
+  margin-left: auto;
+  margin-right: 0; }
+
 .borderContainer {
   border: 2px solid;
   border-color: #5BA3D6;
-  height: 311px; }
+  height: 311px;
+  width: 100%; }
 
 .column {
   margin-left: 4%;
@@ -9,7 +14,10 @@
   vertical-align: top;
   box-sizing: border-box;
   margin-top: 40px;
-  width: 100%; }
+  width: 256px; }
+
+.left, .middle, .right {
+  width: 306px; }
 
 .box {
   border-top: 2px solid #5BA3D6;
@@ -65,16 +73,25 @@
 .column .box :nth-child(5) {
   border-right: none; }
 
-img {
+.front img {
   height: 238px;
   max-width: 100%;
   margin-left: 21px;
-  margin-top: -15px;
+  margin-bottom: 8px;
+  margin-top: 3px;
+  padding-bottom: 20px; }
+
+.back img {
+  height: 238px;
+  max-width: 100%;
+  margin-right: 14px;
+  margin-bottom: 8px;
+  margin-top: 3px;
   padding-bottom: 20px; }
 
 .three > p {
   margin: 0;
-  padding: 13px; }
+  padding: 11px; }
 
 p {
   color: #5BA3D6;
@@ -94,8 +111,8 @@ i {
   width: 20px;
   display: block;
   box-sizing: border-box;
-  margin-top: 11px;
-  margin: auto; }
+  margin-top: 10px;
+  margin-left: 15px; }
 
 .pink.four .small {
   border: solid #D482AA;
@@ -104,8 +121,8 @@ i {
   width: 20px;
   display: block;
   box-sizing: border-box;
-  margin-top: 11px;
-  margin: auto; }
+  margin-top: 10px;
+  margin-left: 15px; }
 
 .orange.four .small {
   border: solid #D8AD7A;
@@ -114,8 +131,8 @@ i {
   width: 20px;
   display: block;
   box-sizing: border-box;
-  margin-top: 11px;
-  margin: auto; }
+  margin-top: 10px;
+  margin-left: 15px; }
 
 .column .box i {
   text-align: center;
@@ -187,18 +204,6 @@ span {
   display: inline-block;
   position: relative; }
 
-@keyframes moveUp {
-  0% {
-    margin-top: 0px; }
-  100% {
-    margin-top: -1%; } }
-
-@keyframes fade {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
 .tshirt ul {
   display: none;
   position: absolute;
@@ -208,7 +213,7 @@ span {
   padding: 0; }
 
 .dropdown:hover .tshirt ul {
-  display: block;
+  display: inline-block;
   border: solid 2px #5BA3D6;
   background-color: white;
   height: 150px;
@@ -255,8 +260,8 @@ span {
   cursor: pointer; }
 
 .flip-container, .front, .back {
-  max-width: 250px;
-  height: 238px; }
+  height: 238px;
+  max-width: 100%; }
 
 .flipper {
   transition: .5s;
@@ -270,7 +275,8 @@ span {
   left: 0; }
 
 .front {
-  z-index: 2; }
+  z-index: 2;
+  transform: rotateY(0deg); }
 
 .back {
   transform: rotateY(180deg); }
@@ -287,13 +293,8 @@ span {
   position: absolute;
   top: -94px;
   margin-left: -11px;
-  margin-top: 22px; }
-
-@keyframes moveUp {
-  0% {
-    margin-top: 0px; }
-  100% {
-    margin-top: -1%; } }
+  margin-top: 24px;
+  padding: 1px; }
 
 .dropdownTwo:hover ul {
   animation: moveUp .2s;
@@ -359,7 +360,7 @@ span {
   position: relative; }
 
 .totalBox {
-  height: 250px;
+  height: 400px;
   width: 300px;
   border: 2px solid #5BA3D6;
   padding-top: 20px; }
@@ -372,12 +373,25 @@ span {
 
 input[type="text"] {
   width: 80px;
-  margin-left: 190px;
-  text-align: right; }
+  display: inline-block;
+  float: right;
+  margin-top: -36px; }
 
 label {
-  margin-top: 10px;
-  margin-left: 190px; }
+  margin-top: 10px; }
 
 .totalColumn {
   margin-top: 30px; }
+
+.cartBox {
+  border-top: 2px solid #5BA3D6;
+  width: 298px;
+  margin-top: 20px; }
+
+h5 {
+  font-family: "Ubuntu", sans-serif;
+  color: #5BA3D6; }
+
+h2 {
+  font-family: "Ubuntu", sans-serif;
+  color: #5BA3D6; }

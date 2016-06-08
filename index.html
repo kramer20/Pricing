@@ -3,7 +3,6 @@
 	<head>
 		<title>Tshirts</title>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<link href="reset.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
 		<script src="https://use.fontawesome.com/3bc19f98ca.js"></script>
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro|Ubuntu' rel='stylesheet' type='text/css'>
@@ -96,7 +95,7 @@
 						</div>
 					</div>
 					
-					<div id="cartBlue" onClick="add29()" class="icon cartBlue">
+					<div id="cartBlue" onClick="addToCart(29,'blue')" class="icon cartBlue">
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 					</div>
 					
@@ -197,7 +196,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="cartPink" onClick="add19()" class="icon cartPink">
+					<div id="cartPink" onClick="addToCart(19,'pink')" class="icon cartPink">
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 					</div>
 					</div>
@@ -297,7 +296,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="cartOrange" onClick="add39()" class="icon cartOrange">
+					<div id="cartOrange" onClick="addToCart(39,'orange')" class="icon cartOrange">
 						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
 					</div>
 					</div>
@@ -319,8 +318,9 @@
 			</div>
 
 			<div class="row">
-				<div class="col-md-offset-8 totalColumn">
+				<div class="col-md-12 totalColumn">
 					<div class="totalBox">
+			
 						<label>Subtotal</label>
 						<input id="subtotal" type="text"> 
 
@@ -328,10 +328,16 @@
 						<input id="tax" value="6.5%" type="text">
 
 						<label>Total</label>
-						<input id="total" type="text">
+						<input id="total" type="text">	
+				
+						<div class="cartBox">	
+						</div>	
 
-					</div>	
-				</div>
+						<div id="date">
+						</div>
+					</div>		
+				</div>	
+
 			</div>	
 
 		</div>

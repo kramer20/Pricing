@@ -1,85 +1,107 @@
-var blueCart = 29;
-var pinkCart = 19;
-var orangeCart = 39;
+var blueTshirt = {
+  price:29.00,
+  color:'blue',
+  inCart:false,
+}
+var pinkTshirt = {
+  price:19.00,
+  color:'pink',
+  inCart:false,
+}
+var orangeTshirt = {
+  price:39.00,
+  color:'orange',
+  inCart:false,
+}
+
+// Array for the cart
+var cart = [];
+
 var total = 0;
 
-var BlueinCart = false;
-var PinkinCart = false;
-var OrangeinCart = false;
 
-function add29() { 
-  var cartBlue=document.getElementById("cartBlue")
-  if (BlueinCart==false)
+// Accessing items from HTML
+var subtotalBox = document.getElementById('subtotal');
+var totalBox = document.getElementById('total');
+var blueCart = document.getElementById('cartBlue');
+var pinkCart = document.getElementById('cartPink');
+var orangeCart = document.getElementById('cartOrange');
+var cartBox = document.querySelector('.cartBox');
+document.getElementById("date").innerHTML = "<h5>"+Date()+"</h5>";
+
+function addToCart(price,color) { 
+
+  if (blueTshirt.inCart === false && color==='blue')
   {
-    cartBlue.className='active';
-    BlueinCart=true;
-    total=total+blueCart;
-    var input = document.getElementById("subtotal");
-    var totalBox = document.getElementById("total");
-    input.value = total;
+    blueCart.className='active';
+    blueTshirt.inCart=true;
+    cart.push(blueTshirt);
+    total=total+blueTshirt.price;
+    subtotalBox.value = total;
     totalBox.value = calculateTotal(); 
   }
-  else
+  else if(color === 'blue')
   {
-    cartBlue.className="click";
-    BlueinCart=false;
-    total=total-blueCart;
-    var input = document.getElementById("subtotal");
-    var totalBox = document.getElementById("total");
-    input.value = total;
+    blueCart.className="click";
+    blueTshirt.inCart=false;
+    cart.splice(cart.indexOf(blueTshirt),1);
+    total=total-blueTshirt.price;
+    subtotalBox.value = total;
     totalBox.value = calculateTotal();
   }
-}
 
-function add19() { 
-  var cartPink=document.getElementById("cartPink")
-  if (PinkinCart==false)
+  else if (pinkTshirt.inCart === false && color==='pink')
   {
-    cartPink.className='active';
-    PinkinCart=true;
-    total=total+pinkCart;
-    var input = document.getElementById("subtotal");
-    var totalBox = document.getElementById("total");
-    input.value = total;
+    pinkCart.className='active';
+    pinkTshirt.inCart=true;
+    cart.push(pinkTshirt);
+    total=total+pinkTshirt.price;
+    subtotalBox.value = total;
     totalBox.value = calculateTotal(); 
   }
-  else
+  else if (color === 'pink')
   {
-    cartPink.className="click";
-    PinkinCart=false;
-    total=total-pinkCart;
-    var input = document.getElementById("subtotal");
-    var totalBox = document.getElementById("total");
-    input.value = total;
+    pinkCart.className="click";
+    pinkTshirt.inCart=false;
+    cart.splice(cart.indexOf(pinkTshirt),1);
+    total=total-pinkTshirt.price;
+    subtotalBox.value = total;
     totalBox.value = calculateTotal();
   }
-}
 
-function add39() { 
-  var cartOrange=document.getElementById("cartOrange")
-  if (OrangeinCart==false)
+  else if (orangeTshirt.inCart === false && color==='orange')
   {
-    cartOrange.className='active';
-    OrangeinCart=true;
-    total=total+orangeCart;
-    var input = document.getElementById("subtotal");
-    var totalBox = document.getElementById("total");
-    input.value = total;
+    orangeCart.className='active';
+    orangeTshirt.inCart=true;
+    cart.push(orangeTshirt);
+    total=total+orangeTshirt.price;
+    subtotalBox.value = total;
     totalBox.value = calculateTotal(); 
   }
-  else
+  else if (color === 'orange')
   {
-    cartOrange.className="click";
-    OrangeinCart=false;
-    total=total-orangeCart;
-    var input = document.getElementById("subtotal");
-    var totalBox = document.getElementById("total");
-    input.value = total;
+    orangeCart.className="click";
+    orangeTshirt.inCart=false;
+    cart.splice(cart.indexOf(orangeTshirt),1);
+    total=total-orangeTshirt.price;
+    subtotalBox.value = total;
     totalBox.value = calculateTotal();
   }
+
+  var HTML = "";
+
+  cart.forEach(function(shirt){
+    HTML+= "<h2 class='newItem'><div class='shirtColor'>"+shirt.color+"</div>" + shirt.price+"</h2>";
+  });
+
+  cartBox.innerHTML = HTML;
+
+  console.log(cart);
 }
 
 
 function calculateTotal() {
   return (total*.065) + total;
 }
+
+
