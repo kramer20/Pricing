@@ -1,17 +1,20 @@
 var blueTshirt = {
   price:29.00,
-  color:'blue',
+  color:'Blue',
   inCart:false,
+  title:'Save my trees',
 }
 var pinkTshirt = {
   price:19.00,
-  color:'pink',
+  color:'Pink',
   inCart:false,
+  title:'Nature Lover',
 }
 var orangeTshirt = {
   price:39.00,
-  color:'orange',
+  color:'Orange',
   inCart:false,
+  title:'Forrest Walk',
 }
 
 // Array for the cart
@@ -91,7 +94,7 @@ function addToCart(price,color) {
   var HTML = "";
 
   cart.forEach(function(shirt){
-    HTML+= "<h2 class='newItem'><div class='shirtColor'>"+shirt.color+"</div>" + shirt.price+"</h2>";
+    HTML+= "<h2 class='newItem'><span class='shirtColor'>"+shirt.color+"</span>"+ "<span class='shirtPrice'>"+shirt.price+"</span>"+"<div class='shirtTitle'>"+shirt.title+"</div></h2>";
   });
 
   cartBox.innerHTML = HTML;

@@ -196,10 +196,6 @@ i {
   margin-left: 0;
   padding-top: 15px; }
 
-span {
-  font-weight: bold;
-  margin-left: 139px; }
-
 .dropdown {
   display: inline-block;
   position: relative; }
@@ -367,7 +363,7 @@ span {
 
 .totalBox label, input {
   color: #5BA3D6;
-  font-size: 20px;
+  font-size: 15px;
   font-family: "Ubuntu", sans-serif;
   display: block; }
 
@@ -390,8 +386,30 @@ label {
 
 h5 {
   font-family: "Ubuntu", sans-serif;
-  color: #5BA3D6; }
+  color: #5BA3D6;
+  margin-top: 20px;
+  margin-left: 5px; }
 
 h2 {
   font-family: "Ubuntu", sans-serif;
-  color: #5BA3D6; }
+  color: #5BA3D6;
+  font-size: 18px;
+  margin-top: 20px; }
+
+span.inCart {
+  font-family: "Ubuntu", sans-serif;
+  color: #5BA3D6;
+  font-size: 18px;
+  margin-left: 125px; }
+
+span.shirtColor {
+  font-weight: bold;
+  margin-right: 10px;
+  margin-left: 5px; }
+
+span.shirtPrice {
+  font-weight: bold; }
+
+.shirtTitle {
+  margin-left: 5px;
+  font-size: 15px; }
